@@ -5,7 +5,7 @@
 name: Build and deploy Python app to Azure Web App - price-scraper
 
 env:
-  STARTUP_COMMAND: 'gunicorn --bind=0.0.0.0 --timeout 600 frontend/front_end:app'
+  STARTUP_COMMAND: 'gunicorn --bind=0.0.0.0 --timeout 600 --chdir frontend front_end:myapp'
 
 on:
   push:
