@@ -1,4 +1,3 @@
-from sre_constants import SRE_FLAG_ASCII
 from bs4 import BeautifulSoup
 import requests
 import re
