@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for
-from forms import ScraperForm
-from scraper import ScraperManager, Scraper
+from frontend.forms import ScraperForm
+from frontend.scraper import ScraperManager, Scraper
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'asödjfq324234kjnden3'
@@ -24,4 +24,4 @@ def add_scraper():
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(host='0.0.0.0', debug = True)
