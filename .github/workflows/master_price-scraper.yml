@@ -4,9 +4,6 @@
 
 name: Build and deploy Python app to Azure Web App - price-scraper
 
-env:
-  STARTUP_COMMAND: 'gunicorn --bind=0.0.0.0 --timeout 600 --chdir frontend front_end:myapp'
-
 on:
   push:
     branches:
@@ -62,6 +59,5 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'price-scraper'
-          startup-command: ${{ env.STARTUP_COMMAND }}
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0107F1AB1C45425E931534D6C89CFAB7 }}
