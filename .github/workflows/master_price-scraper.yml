@@ -11,6 +11,9 @@ on:
       - master
   workflow_dispatch:
 
+env:
+  STARTUP_COMMAND: 'gunicorn --bind=0.0.0.0 --timeout 600 frontend/front_end:app'
+
 jobs:
   build:
     runs-on: ubuntu-latest
